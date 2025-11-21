@@ -1,0 +1,2753 @@
+### Workload Run — 20251121_124155 ###
+Total queries executed: 250
+
+
+--- Query 1 ---
+RAW: MATCH (m:Movie {year:2006, title:"Movie46"}) RETURN m
+RUN: MATCH (v1:Movie {year:2006, title:"Movie46"}) RETURN v1
+Time: 0.0379s
+Planning: 38 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 2 ---
+RAW: MATCH (actor27:Actor)-[:ACTED_IN]->(movie27:Movie) RETURN actor27.name, movie27.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0343s
+Planning: 28 ms
+Execution: 259 ms
+Pure Exec: 231 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 3 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 9
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 9
+Time: 0.0365s
+Planning: 36 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 9 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 4 ---
+RAW: MATCH (actor39:Actor)-[:ACTED_IN]->(movie39:Movie) RETURN actor39.name, movie39.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 167 ms
+Pure Exec: 166 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 5 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie32" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie32" RETURN v1
+Time: 0.0265s
+Planning: 26 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 6 ---
+RAW: MATCH (m:Movie {year:2006, title:"Movie6"}) RETURN m
+RUN: MATCH (v1:Movie {year:2006, title:"Movie6"}) RETURN v1
+Time: 0.0074s
+Planning: 7 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 7 ---
+RAW: MATCH (m:Movie {title:"Movie11", year:2011}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie11", year:2011}) RETURN v1
+Time: 0.0416s
+Planning: 40 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 8 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 8
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 8
+Time: 0.0416s
+Planning: 38 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 8 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 9 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 176 ms
+Pure Exec: 175 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 10 ---
+RAW: MATCH (m:Movie {title:"Movie9", year:2009}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie9", year:2009}) RETURN v1
+Time: 0.0119s
+Planning: 7 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 11 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 181 ms
+Pure Exec: 180 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 12 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0015s
+Planning: 1 ms
+Execution: 205 ms
+Pure Exec: 204 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 13 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 7
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 7
+Time: 0.0345s
+Planning: 34 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 7 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 14 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 5
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 5
+Time: 0.0289s
+Planning: 27 ms
+Execution: 2 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 15 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 4
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 4
+Time: 0.0382s
+Planning: 37 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 4 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 16 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie4" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie4" RETURN v1
+Time: 0.0032s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 17 ---
+RAW: MATCH (actor0:Actor)-[:ACTED_IN]->(movie0:Movie) RETURN actor0.name, movie0.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0030s
+Planning: 1 ms
+Execution: 193 ms
+Pure Exec: 192 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 18 ---
+RAW: MATCH (m:Movie {year:2008, title:"Movie48"}) RETURN m
+RUN: MATCH (v1:Movie {year:2008, title:"Movie48"}) RETURN v1
+Time: 0.0042s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 19 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie10" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie10" RETURN v1
+Time: 0.0025s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 20 ---
+RAW: MATCH (m:Movie {title:"Movie25", year:2005}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie25", year:2005}) RETURN v1
+Time: 0.0023s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 21 ---
+RAW: MATCH (m:Movie {title:"Movie15", year:2015}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie15", year:2015}) RETURN v1
+Time: 0.0087s
+Planning: 2 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 22 ---
+RAW: MATCH (actor17:Actor)-[:ACTED_IN]->(movie17:Movie) RETURN actor17.name, movie17.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 0 ms
+Execution: 185 ms
+Pure Exec: 185 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 23 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0019s
+Planning: 0 ms
+Execution: 168 ms
+Pure Exec: 168 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 24 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie27" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie27" RETURN v1
+Time: 0.0065s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 25 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 8
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 8
+Time: 0.0009s
+Planning: 0 ms
+Execution: 2 ms
+Pure Exec: 2 ms
+Memory: 328
+Rows: 8 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 26 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie43" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie43" RETURN v1
+Time: 0.0070s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 27 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie3" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie3" RETURN v1
+Time: 0.0057s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 28 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 139 ms
+Pure Exec: 139 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 29 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 5
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 5
+Time: 0.0010s
+Planning: 1 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 30 ---
+RAW: MATCH (actor22:Actor)-[:ACTED_IN]->(movie22:Movie) RETURN actor22.name, movie22.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 178 ms
+Pure Exec: 178 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 31 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 1
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 1
+Time: 0.0500s
+Planning: 49 ms
+Execution: 2 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 1 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 32 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie47" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie47" RETURN v1
+Time: 0.0056s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 33 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 2
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 2
+Time: 0.0337s
+Planning: 32 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 2 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 34 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie40" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie40" RETURN v1
+Time: 0.0061s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 35 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0109s
+Planning: 11 ms
+Execution: 366 ms
+Pure Exec: 355 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 36 ---
+RAW: MATCH (m:Movie {year:2012, title:"Movie32"}) RETURN m
+RUN: MATCH (v1:Movie {year:2012, title:"Movie32"}) RETURN v1
+Time: 0.0071s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 37 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie0" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie0" RETURN v1
+Time: 0.0184s
+Planning: 19 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 38 ---
+RAW: MATCH (actor33:Actor)-[:ACTED_IN]->(movie33:Movie) RETURN actor33.name, movie33.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0012s
+Planning: 0 ms
+Execution: 232 ms
+Pure Exec: 232 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 39 ---
+RAW: MATCH (m:Movie {title:"Movie41", year:2001}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie41", year:2001}) RETURN v1
+Time: 0.0078s
+Planning: 6 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 40 ---
+RAW: MATCH (m:Movie {title:"Movie31", year:2011}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie31", year:2011}) RETURN v1
+Time: 0.0039s
+Planning: 3 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 41 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0033s
+Planning: 0 ms
+Execution: 183 ms
+Pure Exec: 183 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 42 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie33" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie33" RETURN v1
+Time: 0.0030s
+Planning: 3 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 43 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 7
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 7
+Time: 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 7 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 44 ---
+RAW: MATCH (m:Movie {title:"Movie43", year:2003}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie43", year:2003}) RETURN v1
+Time: 0.0031s
+Planning: 3 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 45 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 2
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 2
+Time: 0.0030s
+Planning: 1 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 2 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 46 ---
+RAW: MATCH (actor12:Actor)-[:ACTED_IN]->(movie12:Movie) RETURN actor12.name, movie12.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0030s
+Planning: 1 ms
+Execution: 229 ms
+Pure Exec: 228 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 47 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 8
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 8
+Time: 0.0011s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 8 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 48 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 133 ms
+Pure Exec: 132 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 49 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0016s
+Planning: 0 ms
+Execution: 152 ms
+Pure Exec: 152 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 50 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie36" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie36" RETURN v1
+Time: 0.0082s
+Planning: 7 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 51 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0081s
+Planning: 6 ms
+Execution: 220 ms
+Pure Exec: 214 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 52 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 8
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 8
+Time: 0.0022s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 8 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 53 ---
+RAW: MATCH (actor24:Actor)-[:ACTED_IN]->(movie24:Movie) RETURN actor24.name, movie24.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 1 ms
+Execution: 131 ms
+Pure Exec: 130 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 54 ---
+RAW: MATCH (actor28:Actor)-[:ACTED_IN]->(movie28:Movie) RETURN actor28.name, movie28.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 0 ms
+Execution: 170 ms
+Pure Exec: 170 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 55 ---
+RAW: MATCH (actor13:Actor)-[:ACTED_IN]->(movie13:Movie) RETURN actor13.name, movie13.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 1 ms
+Execution: 160 ms
+Pure Exec: 159 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 56 ---
+RAW: MATCH (m:Movie {year:2016, title:"Movie36"}) RETURN m
+RUN: MATCH (v1:Movie {year:2016, title:"Movie36"}) RETURN v1
+Time: 0.0061s
+Planning: 6 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 57 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 9
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 9
+Time: 0.0014s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 9 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 58 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 129 ms
+Pure Exec: 128 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 59 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0066s
+Planning: 4 ms
+Execution: 215 ms
+Pure Exec: 211 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 60 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 2 ms
+Execution: 228 ms
+Pure Exec: 226 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 61 ---
+RAW: MATCH (actor23:Actor)-[:ACTED_IN]->(movie23:Movie) RETURN actor23.name, movie23.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 0 ms
+Execution: 158 ms
+Pure Exec: 158 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 62 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0028s
+Planning: 2 ms
+Execution: 170 ms
+Pure Exec: 168 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 63 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 1 ms
+Execution: 148 ms
+Pure Exec: 147 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 64 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 127 ms
+Pure Exec: 126 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 65 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie15" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie15" RETURN v1
+Time: 0.0063s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 66 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 10
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 10
+Time: 0.0377s
+Planning: 36 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 10 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 67 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie16" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie16" RETURN v1
+Time: 0.0067s
+Planning: 7 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 68 ---
+RAW: MATCH (m:Movie {year:2010, title:"Movie30"}) RETURN m
+RUN: MATCH (v1:Movie {year:2010, title:"Movie30"}) RETURN v1
+Time: 0.0063s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 69 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie31" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie31" RETURN v1
+Time: 0.0056s
+Planning: 6 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 70 ---
+RAW: MATCH (actor32:Actor)-[:ACTED_IN]->(movie32:Movie) RETURN actor32.name, movie32.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0005s
+Planning: 0 ms
+Execution: 95 ms
+Pure Exec: 95 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 71 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie34" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie34" RETURN v1
+Time: 0.0060s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 72 ---
+RAW: MATCH (actor30:Actor)-[:ACTED_IN]->(movie30:Movie) RETURN actor30.name, movie30.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 127 ms
+Pure Exec: 126 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 73 ---
+RAW: MATCH (actor26:Actor)-[:ACTED_IN]->(movie26:Movie) RETURN actor26.name, movie26.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0030s
+Planning: 1 ms
+Execution: 167 ms
+Pure Exec: 166 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 74 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 9
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 9
+Time: 0.0030s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 9 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 75 ---
+RAW: MATCH (m:Movie {year:2010, title:"Movie10"}) RETURN m
+RUN: MATCH (v1:Movie {year:2010, title:"Movie10"}) RETURN v1
+Time: 0.0050s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 76 ---
+RAW: MATCH (actor47:Actor)-[:ACTED_IN]->(movie47:Movie) RETURN actor47.name, movie47.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 147 ms
+Pure Exec: 146 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 77 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie9" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie9" RETURN v1
+Time: 0.0047s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 78 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie19" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie19" RETURN v1
+Time: 0.0047s
+Planning: 4 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 79 ---
+RAW: MATCH (m:Movie {title:"Movie1", year:2001}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie1", year:2001}) RETURN v1
+Time: 0.0039s
+Planning: 3 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 80 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 9
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 9
+Time: 0.0015s
+Planning: 1 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 9 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 81 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 122 ms
+Pure Exec: 121 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 82 ---
+RAW: MATCH (actor7:Actor)-[:ACTED_IN]->(movie7:Movie) RETURN actor7.name, movie7.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 168 ms
+Pure Exec: 167 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 83 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0031s
+Planning: 2 ms
+Execution: 198 ms
+Pure Exec: 196 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 84 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 6
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 6
+Time: 0.1449s
+Planning: 143 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 6 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 85 ---
+RAW: MATCH (m:Movie {title:"Movie3", year:2003}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie3", year:2003}) RETURN v1
+Time: 0.0039s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 86 ---
+RAW: MATCH (actor29:Actor)-[:ACTED_IN]->(movie29:Movie) RETURN actor29.name, movie29.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 211 ms
+Pure Exec: 210 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 87 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie39" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie39" RETURN v1
+Time: 0.0030s
+Planning: 2 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 88 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0102s
+Planning: 4 ms
+Execution: 173 ms
+Pure Exec: 169 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 89 ---
+RAW: MATCH (actor9:Actor)-[:ACTED_IN]->(movie9:Movie) RETURN actor9.name, movie9.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0060s
+Planning: 4 ms
+Execution: 130 ms
+Pure Exec: 126 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 90 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie1" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie1" RETURN v1
+Time: 0.0068s
+Planning: 5 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 91 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 5
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 5
+Time: 0.0010s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 92 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 6
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 6
+Time: 0.0007s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 6 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 93 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 8
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 8
+Time: 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 8 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 94 ---
+RAW: MATCH (m:Movie {year:2006, title:"Movie26"}) RETURN m
+RUN: MATCH (v1:Movie {year:2006, title:"Movie26"}) RETURN v1
+Time: 0.0070s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 95 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0008s
+Planning: 0 ms
+Execution: 249 ms
+Pure Exec: 249 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 96 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0012s
+Planning: 0 ms
+Execution: 162 ms
+Pure Exec: 162 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 97 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0031s
+Planning: 1 ms
+Execution: 225 ms
+Pure Exec: 224 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 98 ---
+RAW: MATCH (m:Movie {title:"Movie19", year:2019}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie19", year:2019}) RETURN v1
+Time: 0.0037s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 99 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie45" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie45" RETURN v1
+Time: 0.0035s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 100 ---
+RAW: MATCH (m:Movie {title:"Movie17", year:2017}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie17", year:2017}) RETURN v1
+Time: 0.0021s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 101 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 4
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 4
+Time: 0.0008s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 4 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 102 ---
+RAW: MATCH (actor36:Actor)-[:ACTED_IN]->(movie36:Movie) RETURN actor36.name, movie36.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0041s
+Planning: 2 ms
+Execution: 210 ms
+Pure Exec: 208 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 103 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 3
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 3
+Time: 0.1517s
+Planning: 150 ms
+Execution: 2 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 3 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 104 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie14" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie14" RETURN v1
+Time: 0.0077s
+Planning: 7 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 105 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 162 ms
+Pure Exec: 161 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 106 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie11" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie11" RETURN v1
+Time: 0.0050s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 107 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0018s
+Planning: 0 ms
+Execution: 190 ms
+Pure Exec: 190 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 108 ---
+RAW: MATCH (m:Movie {title:"Movie5", year:2005}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie5", year:2005}) RETURN v1
+Time: 0.0026s
+Planning: 3 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 109 ---
+RAW: MATCH (actor44:Actor)-[:ACTED_IN]->(movie44:Movie) RETURN actor44.name, movie44.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 282 ms
+Pure Exec: 282 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 110 ---
+RAW: MATCH (m:Movie {year:2012, title:"Movie12"}) RETURN m
+RUN: MATCH (v1:Movie {year:2012, title:"Movie12"}) RETURN v1
+Time: 0.0111s
+Planning: 8 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 111 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 229 ms
+Pure Exec: 229 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 112 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie44" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie44" RETURN v1
+Time: 0.0238s
+Planning: 23 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 113 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0017s
+Planning: 1 ms
+Execution: 157 ms
+Pure Exec: 156 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 114 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie23" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie23" RETURN v1
+Time: 0.0040s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 115 ---
+RAW: MATCH (actor4:Actor)-[:ACTED_IN]->(movie4:Movie) RETURN actor4.name, movie4.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0031s
+Planning: 2 ms
+Execution: 218 ms
+Pure Exec: 216 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 116 ---
+RAW: MATCH (actor15:Actor)-[:ACTED_IN]->(movie15:Movie) RETURN actor15.name, movie15.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 0 ms
+Execution: 164 ms
+Pure Exec: 164 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 117 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 137 ms
+Pure Exec: 136 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 118 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 2
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 2
+Time: 0.0021s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 2 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 119 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 6
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 6
+Time: 0.0010s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 6 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 120 ---
+RAW: MATCH (m:Movie {year:2004, title:"Movie24"}) RETURN m
+RUN: MATCH (v1:Movie {year:2004, title:"Movie24"}) RETURN v1
+Time: 0.0119s
+Planning: 11 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 121 ---
+RAW: MATCH (m:Movie {year:2000, title:"Movie40"}) RETURN m
+RUN: MATCH (v1:Movie {year:2000, title:"Movie40"}) RETURN v1
+Time: 0.0050s
+Planning: 5 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 122 ---
+RAW: MATCH (m:Movie {year:2018, title:"Movie18"}) RETURN m
+RUN: MATCH (v1:Movie {year:2018, title:"Movie18"}) RETURN v1
+Time: 0.0057s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 123 ---
+RAW: MATCH (m:Movie {year:2002, title:"Movie42"}) RETURN m
+RUN: MATCH (v1:Movie {year:2002, title:"Movie42"}) RETURN v1
+Time: 0.0060s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 124 ---
+RAW: MATCH (m:Movie {title:"Movie7", year:2007}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie7", year:2007}) RETURN v1
+Time: 0.0059s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 125 ---
+RAW: MATCH (actor1:Actor)-[:ACTED_IN]->(movie1:Movie) RETURN actor1.name, movie1.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 172 ms
+Pure Exec: 171 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 126 ---
+RAW: MATCH (actor5:Actor)-[:ACTED_IN]->(movie5:Movie) RETURN actor5.name, movie5.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 0 ms
+Execution: 172 ms
+Pure Exec: 172 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 127 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 3
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 3
+Time: 0.0026s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 3 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 128 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 1 ms
+Execution: 224 ms
+Pure Exec: 223 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 129 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 9
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 9
+Time: 0.0056s
+Planning: 3 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 9 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 130 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 7
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 7
+Time: 0.0007s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 7 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 131 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 4
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 4
+Time: 0.0010s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 4 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 132 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0009s
+Planning: 0 ms
+Execution: 172 ms
+Pure Exec: 172 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 133 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 176 ms
+Pure Exec: 176 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 134 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 2
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 2
+Time: 0.0020s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 2 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 135 ---
+RAW: MATCH (actor19:Actor)-[:ACTED_IN]->(movie19:Movie) RETURN actor19.name, movie19.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 213 ms
+Pure Exec: 212 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 136 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie6" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie6" RETURN v1
+Time: 0.0081s
+Planning: 7 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 137 ---
+RAW: MATCH (m:Movie {year:2000, title:"Movie20"}) RETURN m
+RUN: MATCH (v1:Movie {year:2000, title:"Movie20"}) RETURN v1
+Time: 0.0060s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 138 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0011s
+Planning: 1 ms
+Execution: 188 ms
+Pure Exec: 187 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 139 ---
+RAW: MATCH (actor42:Actor)-[:ACTED_IN]->(movie42:Movie) RETURN actor42.name, movie42.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0005s
+Planning: 0 ms
+Execution: 112 ms
+Pure Exec: 112 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 140 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 143 ms
+Pure Exec: 142 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 141 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0050s
+Planning: 3 ms
+Execution: 139 ms
+Pure Exec: 136 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 142 ---
+RAW: MATCH (m:Movie {year:2000, title:"Movie0"}) RETURN m
+RUN: MATCH (v1:Movie {year:2000, title:"Movie0"}) RETURN v1
+Time: 0.0108s
+Planning: 10 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 143 ---
+RAW: MATCH (m:Movie {year:2004, title:"Movie44"}) RETURN m
+RUN: MATCH (v1:Movie {year:2004, title:"Movie44"}) RETURN v1
+Time: 0.0139s
+Planning: 12 ms
+Execution: 2 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 144 ---
+RAW: MATCH (m:Movie {year:2002, title:"Movie2"}) RETURN m
+RUN: MATCH (v1:Movie {year:2002, title:"Movie2"}) RETURN v1
+Time: 0.0175s
+Planning: 16 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 145 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie28" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie28" RETURN v1
+Time: 0.0259s
+Planning: 24 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 146 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie24" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie24" RETURN v1
+Time: 0.0110s
+Planning: 10 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 147 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie37" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie37" RETURN v1
+Time: 0.0061s
+Planning: 5 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 148 ---
+RAW: MATCH (m:Movie {title:"Movie39", year:2019}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie39", year:2019}) RETURN v1
+Time: 0.0059s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 149 ---
+RAW: MATCH (actor37:Actor)-[:ACTED_IN]->(movie37:Movie) RETURN actor37.name, movie37.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0226s
+Planning: 0 ms
+Execution: 183 ms
+Pure Exec: 183 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 150 ---
+RAW: MATCH (actor18:Actor)-[:ACTED_IN]->(movie18:Movie) RETURN actor18.name, movie18.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 1 ms
+Execution: 141 ms
+Pure Exec: 140 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 151 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0008s
+Planning: 1 ms
+Execution: 87 ms
+Pure Exec: 86 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 152 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie8" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie8" RETURN v1
+Time: 0.0043s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 153 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 126 ms
+Pure Exec: 126 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 154 ---
+RAW: MATCH (actor48:Actor)-[:ACTED_IN]->(movie48:Movie) RETURN actor48.name, movie48.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0030s
+Planning: 1 ms
+Execution: 97 ms
+Pure Exec: 96 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 155 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie21" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie21" RETURN v1
+Time: 0.0057s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 156 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 3
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 3
+Time: 0.0020s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 3 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 157 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie22" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie22" RETURN v1
+Time: 0.0050s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 158 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 92 ms
+Pure Exec: 92 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 159 ---
+RAW: MATCH (actor6:Actor)-[:ACTED_IN]->(movie6:Movie) RETURN actor6.name, movie6.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 1 ms
+Execution: 98 ms
+Pure Exec: 97 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 160 ---
+RAW: MATCH (actor11:Actor)-[:ACTED_IN]->(movie11:Movie) RETURN actor11.name, movie11.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 102 ms
+Pure Exec: 101 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 161 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 10
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 10
+Time: 0.0020s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 10 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 162 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 3
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 3
+Time: 0.0008s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 3 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 163 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie35" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie35" RETURN v1
+Time: 0.0064s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 164 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 1
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 1
+Time: 0.0010s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 1 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 165 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0015s
+Planning: 0 ms
+Execution: 100 ms
+Pure Exec: 100 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 166 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie5" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie5" RETURN v1
+Time: 0.0091s
+Planning: 8 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 167 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 0 ms
+Execution: 109 ms
+Pure Exec: 109 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 168 ---
+RAW: MATCH (m:Movie {title:"Movie45", year:2005}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie45", year:2005}) RETURN v1
+Time: 0.0060s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 169 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie46" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie46" RETURN v1
+Time: 0.0050s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 170 ---
+RAW: MATCH (actor41:Actor)-[:ACTED_IN]->(movie41:Movie) RETURN actor41.name, movie41.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 107 ms
+Pure Exec: 106 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 171 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 10
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 10
+Time: 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 10 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 172 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie13" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie13" RETURN v1
+Time: 0.0050s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 173 ---
+RAW: MATCH (m:Movie {title:"Movie13", year:2013}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie13", year:2013}) RETURN v1
+Time: 0.0036s
+Planning: 3 ms
+Execution: 2 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 174 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie48" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie48" RETURN v1
+Time: 0.0233s
+Planning: 19 ms
+Execution: 3 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 175 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie18" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie18" RETURN v1
+Time: 0.0233s
+Planning: 19 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 176 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 1
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 1
+Time: 0.0071s
+Planning: 2 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 1 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 177 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0060s
+Planning: 2 ms
+Execution: 112 ms
+Pure Exec: 110 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 178 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0006s
+Planning: 0 ms
+Execution: 109 ms
+Pure Exec: 109 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 179 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie42" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie42" RETURN v1
+Time: 0.0078s
+Planning: 8 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 180 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 4
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 4
+Time: 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 4 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 181 ---
+RAW: MATCH (m:Movie {title:"Movie49", year:2009}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie49", year:2009}) RETURN v1
+Time: 0.0061s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 182 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie49" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie49" RETURN v1
+Time: 0.0084s
+Planning: 7 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 183 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie17" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie17" RETURN v1
+Time: 0.0079s
+Planning: 6 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 184 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie12" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie12" RETURN v1
+Time: 0.0087s
+Planning: 6 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 185 ---
+RAW: MATCH (m:Movie {title:"Movie35", year:2015}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie35", year:2015}) RETURN v1
+Time: 0.0107s
+Planning: 8 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 186 ---
+RAW: MATCH (actor20:Actor)-[:ACTED_IN]->(movie20:Movie) RETURN actor20.name, movie20.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 0 ms
+Execution: 138 ms
+Pure Exec: 138 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 187 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie7" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie7" RETURN v1
+Time: 0.0109s
+Planning: 8 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 188 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie38" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie38" RETURN v1
+Time: 0.0061s
+Planning: 6 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 189 ---
+RAW: MATCH (m:Movie {year:2014, title:"Movie34"}) RETURN m
+RUN: MATCH (v1:Movie {year:2014, title:"Movie34"}) RETURN v1
+Time: 0.0064s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 190 ---
+RAW: MATCH (m:Movie {year:2014, title:"Movie14"}) RETURN m
+RUN: MATCH (v1:Movie {year:2014, title:"Movie14"}) RETURN v1
+Time: 0.0052s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 191 ---
+RAW: MATCH (actor35:Actor)-[:ACTED_IN]->(movie35:Movie) RETURN actor35.name, movie35.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 113 ms
+Pure Exec: 113 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 192 ---
+RAW: MATCH (m:Movie {title:"Movie21", year:2001}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie21", year:2001}) RETURN v1
+Time: 0.0062s
+Planning: 6 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 193 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 5
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 5
+Time: 0.0010s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 194 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 5
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 5
+Time: 0.0012s
+Planning: 1 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 195 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 1 ms
+Execution: 187 ms
+Pure Exec: 186 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 196 ---
+RAW: MATCH (m:Movie {title:"Movie29", year:2009}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie29", year:2009}) RETURN v1
+Time: 0.0068s
+Planning: 6 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 197 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 151 ms
+Pure Exec: 151 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 198 ---
+RAW: MATCH (m:Movie {year:2018, title:"Movie38"}) RETURN m
+RUN: MATCH (v1:Movie {year:2018, title:"Movie38"}) RETURN v1
+Time: 0.0086s
+Planning: 8 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 199 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 0 ms
+Execution: 157 ms
+Pure Exec: 157 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 200 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie26" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie26" RETURN v1
+Time: 0.0158s
+Planning: 14 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 201 ---
+RAW: MATCH (actor43:Actor)-[:ACTED_IN]->(movie43:Movie) RETURN actor43.name, movie43.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0040s
+Planning: 1 ms
+Execution: 154 ms
+Pure Exec: 153 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 202 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 3
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 3
+Time: 0.0023s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 3 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 203 ---
+RAW: MATCH (m:Movie {year:2008, title:"Movie8"}) RETURN m
+RUN: MATCH (v1:Movie {year:2008, title:"Movie8"}) RETURN v1
+Time: 0.0057s
+Planning: 6 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 204 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 4
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 4
+Time: 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 4 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 205 ---
+RAW: MATCH (m:Movie {title:"Movie47", year:2007}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie47", year:2007}) RETURN v1
+Time: 0.0065s
+Planning: 5 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 206 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0030s
+Planning: 1 ms
+Execution: 179 ms
+Pure Exec: 178 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 207 ---
+RAW: MATCH (actor49:Actor)-[:ACTED_IN]->(movie49:Movie) RETURN actor49.name, movie49.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 155 ms
+Pure Exec: 155 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 208 ---
+RAW: MATCH (actor8:Actor)-[:ACTED_IN]->(movie8:Movie) RETURN actor8.name, movie8.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0051s
+Planning: 2 ms
+Execution: 167 ms
+Pure Exec: 165 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 209 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 148 ms
+Pure Exec: 148 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 210 ---
+RAW: MATCH (actor40:Actor)-[:ACTED_IN]->(movie40:Movie) RETURN actor40.name, movie40.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0018s
+Planning: 0 ms
+Execution: 160 ms
+Pure Exec: 160 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 211 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie20" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie20" RETURN v1
+Time: 0.0120s
+Planning: 11 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 212 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 7
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 7
+Time: 0.0009s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 7 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 213 ---
+RAW: MATCH (actor10:Actor)-[:ACTED_IN]->(movie10:Movie) RETURN actor10.name, movie10.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0012s
+Planning: 0 ms
+Execution: 153 ms
+Pure Exec: 153 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 214 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 10
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 10
+Time: 0.0010s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 10 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 215 ---
+RAW: MATCH (m:Movie {year:2004, title:"Movie4"}) RETURN m
+RUN: MATCH (v1:Movie {year:2004, title:"Movie4"}) RETURN v1
+Time: 0.0070s
+Planning: 5 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 216 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 10
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 10
+Time: 0.0010s
+Planning: 1 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 10 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 217 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 2
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 2
+Time: 0.0020s
+Planning: 1 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 2 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 218 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 1
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 1
+Time: 0.0015s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 1 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 219 ---
+RAW: MATCH (m:Movie {title:"Movie23", year:2003}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie23", year:2003}) RETURN v1
+Time: 0.0115s
+Planning: 9 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 220 ---
+RAW: MATCH (actor31:Actor)-[:ACTED_IN]->(movie31:Movie) RETURN actor31.name, movie31.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 1 ms
+Execution: 243 ms
+Pure Exec: 242 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 221 ---
+RAW: MATCH (m:Movie {year:2002, title:"Movie22"}) RETURN m
+RUN: MATCH (v1:Movie {year:2002, title:"Movie22"}) RETURN v1
+Time: 0.0181s
+Planning: 18 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 222 ---
+RAW: MATCH (actor14:Actor)-[:ACTED_IN]->(movie14:Movie) RETURN actor14.name, movie14.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0066s
+Planning: 3 ms
+Execution: 124 ms
+Pure Exec: 121 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 223 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0054s
+Planning: 2 ms
+Execution: 161 ms
+Pure Exec: 159 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 224 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 7
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 7
+Time: 0.0000s
+Planning: 0 ms
+Execution: 1 ms
+Pure Exec: 1 ms
+Memory: 328
+Rows: 7 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 225 ---
+RAW: MATCH (actor21:Actor)-[:ACTED_IN]->(movie21:Movie) RETURN actor21.name, movie21.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 0 ms
+Execution: 165 ms
+Pure Exec: 165 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 226 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie2" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie2" RETURN v1
+Time: 0.0056s
+Planning: 5 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 227 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 1
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 1
+Time: 0.0022s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 1 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 228 ---
+RAW: MATCH (actor2:Actor)-[:ACTED_IN]->(movie2:Movie) RETURN actor2.name, movie2.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0017s
+Planning: 0 ms
+Execution: 164 ms
+Pure Exec: 164 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 229 ---
+RAW: MATCH (m:Movie {year:2016, title:"Movie16"}) RETURN m
+RUN: MATCH (v1:Movie {year:2016, title:"Movie16"}) RETURN v1
+Time: 0.0038s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 230 ---
+RAW: MATCH (actor25:Actor)-[:ACTED_IN]->(movie25:Movie) RETURN actor25.name, movie25.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 2 ms
+Execution: 160 ms
+Pure Exec: 158 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 231 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie25" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie25" RETURN v1
+Time: 0.0040s
+Planning: 2 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 232 ---
+RAW: MATCH (actor34:Actor)-[:ACTED_IN]->(movie34:Movie) RETURN actor34.name, movie34.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 158 ms
+Pure Exec: 158 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 233 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie30" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie30" RETURN v1
+Time: 0.0045s
+Planning: 4 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 234 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 139 ms
+Pure Exec: 139 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 235 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie29" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie29" RETURN v1
+Time: 0.0115s
+Planning: 10 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 236 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 6
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 6
+Time: 0.0010s
+Planning: 0 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 6 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 237 ---
+RAW: MATCH (m:Movie {year:2008, title:"Movie28"}) RETURN m
+RUN: MATCH (v1:Movie {year:2008, title:"Movie28"}) RETURN v1
+Time: 0.0020s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 238 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 0 ms
+Execution: 193 ms
+Pure Exec: 193 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 239 ---
+RAW: MATCH (m:Movie) WHERE m.title = "Movie41" RETURN m
+RUN: MATCH (v1:Movie) WHERE v1.title = "Movie41" RETURN v1
+Time: 0.0092s
+Planning: 7 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 240 ---
+RAW: MATCH (actor45:Actor)-[:ACTED_IN]->(movie45:Movie) RETURN actor45.name, movie45.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 145 ms
+Pure Exec: 145 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 241 ---
+RAW: MATCH (actor3:Actor)-[:ACTED_IN]->(movie3:Movie) RETURN actor3.name, movie3.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0005s
+Planning: 0 ms
+Execution: 187 ms
+Pure Exec: 187 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 242 ---
+RAW: MATCH (actor16:Actor)-[:ACTED_IN]->(movie16:Movie) RETURN actor16.name, movie16.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0020s
+Planning: 1 ms
+Execution: 98 ms
+Pure Exec: 97 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 243 ---
+RAW: MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   RETURN   a.name ,   m.title   LIMIT 6
+RUN: MATCH (v1:Actor) -[:ACTED_IN]-> (v2:Movie) RETURN v1.name , v2.title LIMIT 6
+Time: 0.0010s
+Planning: 1 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 328
+Rows: 6 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 244 ---
+RAW: MATCH (actor38:Actor)-[:ACTED_IN]->(movie38:Movie) RETURN actor38.name, movie38.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0010s
+Planning: 0 ms
+Execution: 262 ms
+Pure Exec: 262 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 245 ---
+RAW: MATCH (actor46:Actor)-[:ACTED_IN]->(movie46:Movie) RETURN actor46.name, movie46.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0051s
+Planning: 2 ms
+Execution: 223 ms
+Pure Exec: 221 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 246 ---
+RAW: MATCH (m:Movie {title:"Movie37", year:2017}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie37", year:2017}) RETURN v1
+Time: 0.0029s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 247 ---
+RAW: MATCH (m:Movie {title:"Movie27", year:2007}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie27", year:2007}) RETURN v1
+Time: 0.0051s
+Planning: 3 ms
+Execution: 1 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 248 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0046s
+Planning: 3 ms
+Execution: 218 ms
+Pure Exec: 215 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 249 ---
+RAW: MATCH (m:Movie {title:"Movie33", year:2013}) RETURN m
+RUN: MATCH (v1:Movie {title:"Movie33", year:2013}) RETURN v1
+Time: 0.0041s
+Planning: 2 ms
+Execution: 0 ms
+Pure Exec: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+--------------------------------------------------
+
+--- Query 250 ---
+RAW: MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title
+RUN: MATCH (v1:Actor)-[:ACTED_IN]->(v2:Movie) RETURN v1.name, v2.title
+Time: 0.0013s
+Planning: 1 ms
+Execution: 144 ms
+Pure Exec: 143 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+--------------------------------------------------

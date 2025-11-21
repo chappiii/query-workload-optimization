@@ -37,21 +37,43 @@ def run_workload(mode= "raw", repeat_each=5):
     """
     driver = get_driver()
 
+    with driver.session(database=DB_NAME) as session:
+        session.run("CALL db.clearQueryCaches()")
+
     # Generate a massive workload with unique queries
     workload = []
+
     for i in range(50):
-        # Unique literal value
-        workload.append(f'MATCH (m:Movie) WHERE m.title = "Movie{i}" RETURN m')
-        # Unique variable names
-        workload.append(f'MATCH (actor{i}:Actor)-[:ACTED_IN]->(movie{i}:Movie) RETURN actor{i}.name, movie{i}.title')
-        # Unique property order
-        workload.append(f'MATCH (m:Movie {{year:{2000+i%20}, title:"Movie{i}"}}) RETURN m')
-        # Unique formatting
-        workload.append(f'MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT {i%10+1}')
-        # Unique aliasing
-        workload.append(f'MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName{i}, m.title AS movieTitle{i} LIMIT 5')
+
+        workload.append(
+            f'MATCH (actor{i}:Actor)-[:ACTED_IN]->(movie{i}:Movie) '
+            f'RETURN actor{i}.name, movie{i}.title'
+        )
+
+        workload.append(
+            'MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title'
+        )
+
+        workload.append(
+            f'MATCH (m:Movie) WHERE m.title = "Movie{i}" RETURN m'
+        )
+
+        if i % 2 == 0:
+            workload.append(
+                f'MATCH (m:Movie {{year:{2000+i%20}, title:"Movie{i}"}}) RETURN m'
+            )
+        else:
+            workload.append(
+                f'MATCH (m:Movie {{title:"Movie{i}", year:{2000+i%20}}}) RETURN m'
+            )
+
+        workload.append(
+            f'MATCH  (a:Actor) -[:ACTED_IN]-> (m:Movie)   '
+            f'RETURN   a.name ,   m.title   LIMIT {i%10 + 1}'
+        )
 
     random.shuffle(workload)
+
 
     log_dir = Path(__file__).parent / ("logs/anon" if mode == "anon" else "logs/raw")
     log_dir.mkdir(exist_ok=True)
