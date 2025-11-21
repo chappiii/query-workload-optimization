@@ -1,0 +1,503 @@
+### Workload Run — 20251121_080743 ###
+Total queries executed: 50
+
+
+--- Query 1 ---
+MATCH (m:Movie {year:2009, title:"Movie9"}) RETURN m
+Total Time (wall): 2.1743s
+Planning: 14 ms
+Execution: 3 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -11 ms
+--------------------------------------------------
+
+--- Query 2 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName2, m.title AS movieTitle2 LIMIT 5
+Total Time (wall): 0.0040s
+Planning: 3 ms
+Execution: 7 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 4 ms
+--------------------------------------------------
+
+--- Query 3 ---
+MATCH (m:Movie) WHERE m.title = "Movie8" RETURN m
+Total Time (wall): 0.0010s
+Planning: 0 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 4 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName3, m.title AS movieTitle3 LIMIT 5
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 5 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName0, m.title AS movieTitle0 LIMIT 5
+Total Time (wall): 0.0020s
+Planning: 0 ms
+Execution: 0 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 6 ---
+MATCH (m:Movie) WHERE m.title = "Movie7" RETURN m
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 7 ---
+MATCH (actor0:Actor)-[:ACTED_IN]->(movie0:Movie) RETURN actor0.name, movie0.title
+Total Time (wall): 0.0020s
+Planning: 0 ms
+Execution: 284 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 284 ms
+--------------------------------------------------
+
+--- Query 8 ---
+MATCH (m:Movie {year:2008, title:"Movie8"}) RETURN m
+Total Time (wall): 0.0044s
+Planning: 2 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 9 ---
+MATCH (actor8:Actor)-[:ACTED_IN]->(movie8:Movie) RETURN actor8.name, movie8.title
+Total Time (wall): 0.0010s
+Planning: 1 ms
+Execution: 137 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 136 ms
+--------------------------------------------------
+
+--- Query 10 ---
+MATCH (m:Movie) WHERE m.title = "Movie4" RETURN m
+Total Time (wall): 0.0020s
+Planning: 0 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 11 ---
+MATCH (m:Movie) WHERE m.title = "Movie0" RETURN m
+Total Time (wall): 0.0020s
+Planning: 0 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 12 ---
+MATCH (actor7:Actor)-[:ACTED_IN]->(movie7:Movie) RETURN actor7.name, movie7.title
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 165 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 164 ms
+--------------------------------------------------
+
+--- Query 13 ---
+MATCH (m:Movie) WHERE m.title = "Movie1" RETURN m
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 14 ---
+MATCH (m:Movie {year:2005, title:"Movie5"}) RETURN m
+Total Time (wall): 0.0020s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 15 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName4, m.title AS movieTitle4 LIMIT 5
+Total Time (wall): 0.0020s
+Planning: 0 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 1 ms
+--------------------------------------------------
+
+--- Query 16 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName1, m.title AS movieTitle1 LIMIT 5
+Total Time (wall): 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 1 ms
+--------------------------------------------------
+
+--- Query 17 ---
+MATCH (actor3:Actor)-[:ACTED_IN]->(movie3:Movie) RETURN actor3.name, movie3.title
+Total Time (wall): 0.0040s
+Planning: 2 ms
+Execution: 119 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 117 ms
+--------------------------------------------------
+
+--- Query 18 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 6
+Total Time (wall): 0.0020s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 6 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 19 ---
+MATCH (actor2:Actor)-[:ACTED_IN]->(movie2:Movie) RETURN actor2.name, movie2.title
+Total Time (wall): 0.0010s
+Planning: 1 ms
+Execution: 119 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 118 ms
+--------------------------------------------------
+
+--- Query 20 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName7, m.title AS movieTitle7 LIMIT 5
+Total Time (wall): 0.0020s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 21 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 5
+Total Time (wall): 0.0010s
+Planning: 1 ms
+Execution: 2 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 1 ms
+--------------------------------------------------
+
+--- Query 22 ---
+MATCH (m:Movie) WHERE m.title = "Movie2" RETURN m
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 23 ---
+MATCH (actor6:Actor)-[:ACTED_IN]->(movie6:Movie) RETURN actor6.name, movie6.title
+Total Time (wall): 0.0020s
+Planning: 0 ms
+Execution: 164 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 164 ms
+--------------------------------------------------
+
+--- Query 24 ---
+MATCH (m:Movie) WHERE m.title = "Movie9" RETURN m
+Total Time (wall): 0.0050s
+Planning: 2 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 25 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName5, m.title AS movieTitle5 LIMIT 5
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 26 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 4
+Total Time (wall): 0.0030s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 4 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 27 ---
+MATCH (actor4:Actor)-[:ACTED_IN]->(movie4:Movie) RETURN actor4.name, movie4.title
+Total Time (wall): 0.0010s
+Planning: 1 ms
+Execution: 161 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 160 ms
+--------------------------------------------------
+
+--- Query 28 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 1
+Total Time (wall): 0.0040s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 1 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 29 ---
+MATCH (m:Movie {year:2006, title:"Movie6"}) RETURN m
+Total Time (wall): 0.0010s
+Planning: 1 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 30 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 3
+Total Time (wall): 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Memory: 328
+Rows: 3 | DB Hits: 0
+exe: 1 ms
+--------------------------------------------------
+
+--- Query 31 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 7
+Total Time (wall): 0.0010s
+Planning: 0 ms
+Execution: 1 ms
+Memory: 328
+Rows: 7 | DB Hits: 0
+exe: 1 ms
+--------------------------------------------------
+
+--- Query 32 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName6, m.title AS movieTitle6 LIMIT 5
+Total Time (wall): 0.0020s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 33 ---
+MATCH (actor9:Actor)-[:ACTED_IN]->(movie9:Movie) RETURN actor9.name, movie9.title
+Total Time (wall): 0.0488s
+Planning: 47 ms
+Execution: 303 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 256 ms
+--------------------------------------------------
+
+--- Query 34 ---
+MATCH (m:Movie {year:2000, title:"Movie0"}) RETURN m
+Total Time (wall): 0.0024s
+Planning: 2 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -2 ms
+--------------------------------------------------
+
+--- Query 35 ---
+MATCH (actor5:Actor)-[:ACTED_IN]->(movie5:Movie) RETURN actor5.name, movie5.title
+Total Time (wall): 0.0010s
+Planning: 0 ms
+Execution: 233 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 233 ms
+--------------------------------------------------
+
+--- Query 36 ---
+MATCH (m:Movie) WHERE m.title = "Movie6" RETURN m
+Total Time (wall): 0.0017s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 37 ---
+MATCH (m:Movie) WHERE m.title = "Movie3" RETURN m
+Total Time (wall): 0.0166s
+Planning: 4 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -4 ms
+--------------------------------------------------
+
+--- Query 38 ---
+MATCH (actor1:Actor)-[:ACTED_IN]->(movie1:Movie) RETURN actor1.name, movie1.title
+Total Time (wall): 0.0015s
+Planning: 2 ms
+Execution: 328 ms
+Memory: 328
+Rows: 35910 | DB Hits: 0
+exe: 326 ms
+--------------------------------------------------
+
+--- Query 39 ---
+MATCH (m:Movie) WHERE m.title = "Movie5" RETURN m
+Total Time (wall): 0.0064s
+Planning: 2 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 40 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 2
+Total Time (wall): 0.0022s
+Planning: 2 ms
+Execution: 3 ms
+Memory: 328
+Rows: 2 | DB Hits: 0
+exe: 1 ms
+--------------------------------------------------
+
+--- Query 41 ---
+MATCH (m:Movie {year:2001, title:"Movie1"}) RETURN m
+Total Time (wall): 0.0010s
+Planning: 0 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 42 ---
+MATCH (m:Movie {year:2003, title:"Movie3"}) RETURN m
+Total Time (wall): 0.0036s
+Planning: 1 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 43 ---
+MATCH (m:Movie {year:2007, title:"Movie7"}) RETURN m
+Total Time (wall): 0.0040s
+Planning: 1 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -1 ms
+--------------------------------------------------
+
+--- Query 44 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 8
+Total Time (wall): 0.0030s
+Planning: 2 ms
+Execution: 2 ms
+Memory: 328
+Rows: 8 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 45 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName9, m.title AS movieTitle9 LIMIT 5
+Total Time (wall): 0.0010s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 46 ---
+MATCH (m:Movie {year:2002, title:"Movie2"}) RETURN m
+Total Time (wall): 0.0031s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 47 ---
+MATCH (m:Movie {year:2004, title:"Movie4"}) RETURN m
+Total Time (wall): 0.0050s
+Planning: 2 ms
+Execution: 0 ms
+Memory: 312
+Rows: 0 | DB Hits: 0
+exe: -2 ms
+--------------------------------------------------
+
+--- Query 48 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name AS actorName8, m.title AS movieTitle8 LIMIT 5
+Total Time (wall): 0.0041s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 5 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 49 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 10
+Total Time (wall): 0.0049s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 10 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
+
+--- Query 50 ---
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) RETURN a.name, m.title LIMIT 9
+Total Time (wall): 0.0110s
+Planning: 1 ms
+Execution: 1 ms
+Memory: 328
+Rows: 9 | DB Hits: 0
+exe: 0 ms
+--------------------------------------------------
