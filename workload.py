@@ -1,11 +1,13 @@
 import os
-import random
-from pathlib import Path
-from dotenv import load_dotenv
-from datetime import datetime
-from neo4j import GraphDatabase
-import time
 import re
+import time
+import random
+import argparse
+from pathlib import Path
+from datetime import datetime
+from dotenv import load_dotenv
+from neo4j import GraphDatabase
+from anonymizer import normalize_query
 
 # Load environment variables
 env_path = Path(__file__).parent / '.env'
@@ -28,12 +30,16 @@ def clean_query(q: str):
     return q
 
 
-def run_workload(repeat_each=5):
+def run_workload(mode= "raw", repeat_each=5):
+    """
+    mode = "raw"  → just clean query
+    mode = "anon" → apply anonymization
+    """
     driver = get_driver()
 
     # Generate a massive workload with unique queries
     workload = []
-    for i in range(100):
+    for i in range(50):
         # Unique literal value
         workload.append(f'MATCH (m:Movie) WHERE m.title = "Movie{i}" RETURN m')
         # Unique variable names
@@ -47,10 +53,10 @@ def run_workload(repeat_each=5):
 
     random.shuffle(workload)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_dir = Path(__file__).parent / ("logs/anon" if mode == "anon" else "logs/raw")
+    log_dir.mkdir(exist_ok=True)
 
-    log_dir = Path(__file__).parent / "logs"
-    log_dir.mkdir(exist_ok=True) 
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_filename = log_dir / f"workload_log_{timestamp}.txt"
 
     log = []
@@ -59,8 +65,12 @@ def run_workload(repeat_each=5):
 
     with driver.session(database=DB_NAME) as session:
         for i, q in enumerate(workload, 1):
-            q_clean = clean_query(q)
-            profiled_query = "PROFILE " + q_clean
+            if mode == "anon":
+                q_processed = normalize_query(q)
+            else:
+                q_processed = clean_query(q)
+
+            profiled_query = "PROFILE " + q_processed
 
             try:
                 start = time.time()
@@ -75,18 +85,19 @@ def run_workload(repeat_each=5):
                 execution_ms = summary.result_consumed_after
                 global_memory = summary.profile["args"].get("GlobalMemory")
                 execution_ms = summary.result_consumed_after
-                pure_execution_ms = execution_ms - planning_ms
+                pure_execution_ms = max(0, execution_ms - planning_ms)
                 rows = args.get("Rows", "?")
                 db_hits = args.get("DbHits", "?")
 
                 log.append(f"\n--- Query {i} ---")
-                log.append(q_clean)
-                log.append(f"Total Time (wall): {duration:.4f}s")
+                log.append("RAW: " + q)
+                log.append("RUN: " + q_processed)
+                log.append(f"Time: {duration:.4f}s")
                 log.append(f"Planning: {planning_ms} ms")
                 log.append(f"Execution: {execution_ms} ms")
+                log.append(f"Pure Exec: {pure_execution_ms} ms")
                 log.append(f"Memory: {global_memory}")
                 log.append(f"Rows: {rows} | DB Hits: {db_hits}")
-                log.append(f"exe: {pure_execution_ms} ms")
                 log.append("-" * 50)
 
 
@@ -104,4 +115,8 @@ def run_workload(repeat_each=5):
 
 
 if __name__ == "__main__":
-    run_workload(repeat_each=5)   
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=["raw", "anon"], default="raw")
+    args = parser.parse_args()
+
+    run_workload(mode=args.mode, repeat_each=5)
